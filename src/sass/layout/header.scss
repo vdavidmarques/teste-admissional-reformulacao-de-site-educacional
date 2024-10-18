@@ -1,0 +1,105 @@
+@import "../helpers/variables.scss";
+@import "../helpers/mixins.scss";
+
+.header{
+  background-color: $gray-darkness;
+  padding: 1.25rem 0;
+
+  .content{
+    display: grid;
+    @include grid-cols-2;
+    @media (min-width: $breakpoint-lg){
+      @include grid-cols-12;
+    }
+
+    .image{
+      width: 5rem;
+      height: auto;
+      
+      @media (min-width: $breakpoint-lg){
+        @include col-span-3;
+      }
+
+      img.logo{
+        object-fit: contain;
+      }
+    }
+
+    .navbar{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      
+      @media (min-width: $breakpoint-lg){
+        @include col-span-9;
+      }
+
+      .navbar__menu{
+        font-family: $font-rubik;
+        text-transform: uppercase;
+        display: none;
+        
+        @media (min-width: $breakpoint-lg){
+          display: block;
+        }
+        .navbar__list{
+          flex-direction: column;
+          row-gap: 1.25rem;
+          display: none;
+          
+          @media (min-width: $breakpoint-lg){
+            display: flex;
+            flex-direction: row;
+            column-gap: 1.25rem;
+          }
+        }
+
+        a.item{
+          color: $yellow-light;
+
+          &:hover{
+            @include transition-colors;
+            color: $yellow;
+          }
+        }
+
+        &.openned{
+          display: block;
+
+          .navbar__list{
+            display: flex;
+            background-color: $black;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            padding: 2.5rem;
+          }
+        }
+      }
+
+      .menu-icon{
+        width: 1.875rem;
+        height: 1.875rem;
+        @media (min-width: $breakpoint-lg){
+          display: none;
+        }
+      }
+
+      .bg-close-menu-mobile {
+        @include btn-menu-mobile;
+        position: absolute;
+        top: 1.75rem;
+        right: 1rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        background: url("../../dist/icons/close-menu-icon.svg");
+  
+        @media screen and (min-width: $breakpoint-lg) {
+          display: none;
+        }
+      }
+    }
+  }
+}
