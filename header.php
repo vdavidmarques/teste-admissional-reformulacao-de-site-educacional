@@ -41,23 +41,17 @@
                 <nav id="custom-header-menu">
                     <div class="menu-header-container">
                         <ul id="custom-header-menu" class="main-menu">
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144">
                                 <a href="#segmentos-educacionais">Segmentos Educacionais</a>
                             </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145">
                                 <a href="#diferenciais-da-escola">Diferenciais</a>
                             </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143">
                                 <a href="#colegio">Colégio</a>
                             </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147">
-                                <a
-                                    href="#contato"
-                                    target="_blank">Contato</a>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147">
+                                <a href="#contato">Contato</a>
                             </li>
                         </ul>
                     </div>
