@@ -1,4 +1,7 @@
-<?php $root = 'http://localhost:8080/teste-admissional-reformulacao-de-site-educacional' ?>
+<?php 
+    $host = 'http://localhost:8080/';
+    $root = $host . 'teste-admissional-reformulacao-de-site-educacional' 
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 

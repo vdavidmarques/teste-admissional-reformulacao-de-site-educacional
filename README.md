@@ -43,3 +43,6 @@ The project follows a modular structure to keep the code clean and scalable:
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/educational-website.git
+
+2.Change Host 
+Go to header.php at line 2 and change your Host name
