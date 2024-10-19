@@ -20,7 +20,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
         rel="stylesheet" />
-    <?php include 'utils/favicon.php'; ?>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
