@@ -5,6 +5,7 @@ footer {
   position: relative;
   background-color: $f-color;
   color: $white;
+  padding-top: 2.5rem;
   
   @media screen and (min-width: $breakpoint-lg) {
     margin-top: 6.25rem;
@@ -12,12 +13,12 @@ footer {
   }
 
   .after-footer-bg {
-    background-color: $f-color;
-    color: $white;
+    background-color: $white;
+    color: $f-color;
     padding: 0.625rem;
     
     a {
-      color: $white;
+      color: $f-color-dark;
     }
 
     .after-footer {
@@ -48,9 +49,13 @@ footer {
     
     .content{
       @include col-span-12;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       @media screen and (min-width: $breakpoint-lg) {
         @include col-span-6;
+
       }
 
       .social-networks {
@@ -121,6 +126,10 @@ footer {
       right: 2.5rem;
       bottom: 5rem;
     }
+  }
+
+  .wave-1a{
+
   }
 }
 

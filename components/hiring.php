@@ -5,7 +5,7 @@
     </div>
 
     <div class="lists">
-        <div class="list scroll-effect list-0">
+        <div class="list scroll-effect list-1">
             <div class="icon wave">
                 <img
                     src="<?php echo $root ?>/dist/icons/aumente-sua-visibilidade.svg"
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="list scroll-effect list-0">
+        <div class="list scroll-effect list-2">
             <div class="icon wave">
                 <img
                     src="<?php echo $root ?>/dist/icons/certificate-online-achievement.svg"
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="list scroll-effect list-0">
+        <div class="list scroll-effect list-3">
             <div class="icon wave">
                 <img
                     src="<?php echo $root ?>/dist/icons/facilidade-de-contato.svg"

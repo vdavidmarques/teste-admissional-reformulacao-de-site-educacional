@@ -8,7 +8,7 @@
             <div class="packages">
                 <div class="content scroll-effect">
                     <img
-                        src="<?php echo $root ?>/dist/images/o-que-oferecemos-baixada-web-studio.jpg"
+                        src="<?php echo $root ?>/dist/images/diferenciais-da-escola.jpg"
                         alt="Diferenciais da Escola"
                         class="image-content ease-in-out" />
                 </div>
@@ -21,8 +21,7 @@
                                 alt="O que oferecemos" />
                             <div class="text">
                                 <h2>Acolhimento</h2>
-                                <p>Um ambiente que promove o bem-estar e a inclusão dos alunos.</p>
-                              
+                                <p>Nossa escola acredita que o acolhimento é a base para um ambiente educacional saudável e produtivo. Desde o primeiro contato, nossos alunos e suas famílias são recebidos com carinho e atenção, criando um espaço de confiança e respeito.</p>
                             </div>
                         </article>
 
@@ -32,7 +31,7 @@
                                 alt="O que oferecemos" />
                             <div class="text">
                                 <h2>Programas de Ensino Modernos</h2>
-                                <p>Metodologias atualizadas que incentivam o aprendizado ativo.</p>
+                                <p>Com uma abordagem pedagógica moderna e atualizada, nossos programas de ensino são elaborados para atender às necessidades de cada fase do desenvolvimento escolar. Oferecemos uma grade curricular diversificada e completa, aliada a metodologias que incentivam a curiosidade, a criatividade e o pensamento crítico.</p>
                             </div>
                         </article>
 
@@ -42,7 +41,7 @@
                                 alt="O que oferecemos" />
                             <div class="text">
                                 <h2>Cursos Extracurriculares</h2>
-                                <p>Uma ampla variedade de atividades que enriquecem o desenvolvimento dos estudantes.</p>
+                                <p>Entendemos que o desenvolvimento integral dos alunos vai além da sala de aula. Por isso, oferecemos uma ampla gama de cursos extracurriculares que permitem o aperfeiçoamento de habilidades e o descobrimento de novos talentos. </p>
                             </div>
                         </article>
                     </div>

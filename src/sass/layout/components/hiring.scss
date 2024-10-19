@@ -2,14 +2,10 @@
 @import "../../helpers/mixins.scss";
 
 .hiring {
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 150px;
   display: grid;
   @include grid-cols-12;
-
-  @media screen and (min-width: $breakpoint-lg) {
-    padding-top: 5rem;
-  }
 
   h3,
   h4 {

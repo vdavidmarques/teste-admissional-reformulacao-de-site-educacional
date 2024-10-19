@@ -98,6 +98,19 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+var swiper = new Swiper(".main-banner .swiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 7000,
+  },
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 function closeMessage(){
   var closeMessage = document.querySelectorAll(".alert");
   closeMessage.forEach(function(item){

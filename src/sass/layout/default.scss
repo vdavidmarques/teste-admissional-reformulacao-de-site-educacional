@@ -465,10 +465,7 @@ img {
 
 .wave-1{
   background-image: url("../../dist/images/wave-1.svg");
-  bottom: -8.1875rem;
-  @media screen and (min-width: $breakpoint-md){
-    bottom: -9.1875rem;
-  }
+  bottom: -2.1875rem;
 
   @media screen and (min-width: $breakpoint-lg){
     bottom: -2.1875rem;
@@ -493,46 +490,6 @@ img {
 .wave-1b{
   bottom: -5.625rem;
   transform: rotate(180deg);
-}
-
-.wave-2{
-  bottom: -5.875rem;
-  height: 15rem;
-  z-index: 30;
-  
-  @media screen and (min-width: $breakpoint-md){
-    bottom: -5.875rem;
-  }
-  
-  @media screen and (min-width: $breakpoint-lg){
-    bottom: -1.875rem;
-  }
-}
-
-.wave-3{
-  bottom: 0;
-  height: 20.8125rem;
-  z-index: 20;
-  display: none;
-
-  @media screen and (min-width: $breakpoint-lg){
-    bottom: 0;
-    display: block;
-  }
-}
-
-.wave-4{
-  bottom: -7.5rem;
-  height: 20.625rem;
-  z-index: 10;
-
-  @media screen and (min-width: $breakpoint-md){
-    bottom: -7.5rem;
-  }
-
-  @media screen and (min-width: $breakpoint-lg){
-    bottom: 0;
-  }
 }
 
 .pointer-events-none{
