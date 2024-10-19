@@ -1,0 +1,37 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+
+.works{
+    position: relative;
+    padding-top: 9.375rem;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: $breakpoint-lg) {
+        padding-top: 15rem;
+    }
+
+    .lists{
+        row-gap: 2.5rem;
+        display: grid;
+        @include grid-cols-1;
+        
+        @media screen and (min-width: $breakpoint-md) {
+            @include grid-cols-2;
+            column-gap: 2.5rem;
+            row-gap: 1.25rem;
+        }
+        
+        .list{
+            .image{
+                border-radius: 1.25rem;
+                overflow: hidden;
+                max-height: 18.75rem;
+            }
+
+            .text{
+                margin-top: 2.5rem;
+                color: $f-color;
+            }
+        }
+    }
+}

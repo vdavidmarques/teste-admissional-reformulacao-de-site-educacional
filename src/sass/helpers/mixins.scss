@@ -18,6 +18,44 @@
   line-height: 1.25rem;
 }
 
+@mixin text-sm {//14px
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@mixin text-base {//16px
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@mixin text-lg {//18px
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+@mixin text-xl {//20px
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-4xl {//36px
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@mixin heading-text-sm {
+  @include font-montserrat;
+  @include text-sm;
+}
+
+@mixin heading-text-md {
+  @include font-montserrat;
+  @include text-base;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    @include text-lg;
+  }
+}
+
 @mixin heading-titles {
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +65,36 @@
 @mixin heading-title-sm {//14px
   @include text-sm;
   @include heading-titles;
+}
+
+@mixin heading-title-md {//16px
+  @include heading-titles;
+  @include text-base;
+}
+
+@mixin heading-title-lg {//16px e 20px
+  @include heading-titles;
+  @include text-base;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin heading-title-xl {//20px e 35px
+  @include heading-titles;
+  @include text-xl;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 2.1875rem;
+  }
+}
+
+@mixin heading-title-2xl {//36px e 55px
+  @include heading-titles;
+  @include text-4xl;
+  @media screen and (min-width: $breakpoint-lg) {
+    font-size: 3.4375rem;
+    text-indent: -1px;
+  }
 }
 
 @mixin transition-colors {
@@ -58,14 +126,14 @@
   @include heading-text-sm;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: $blue;
+  background-color: $f-color;
   color: $white;
   padding: 1.25rem;
   font-weight: bold;
   border: none;
   
   &:hover{
-    background-color: $blue-dark;
+    background-color: $f-color-dark;
     @include transition-colors;
   }
 }

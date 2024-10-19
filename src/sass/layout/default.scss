@@ -147,7 +147,8 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea,
-input[type] {
+input[type]
+{
   height: 3.4375rem;
 }
 
@@ -155,20 +156,20 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea,
-input[type] {
+input[type]
+{
   font-family: $font-rubik;
   width: 100%;
-  border: 1px solid $yellow;
+  border: 1px solid $f-color;
   padding: 0.625rem 1.25rem 0.625rem 1.25rem;
   border-radius: 1.25rem;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: $yellow;
+input::placeholder, textarea::placeholder {
+  color: $f-color;
 }
 
-textarea {
+textarea{
   height: 9.375rem;
 }
 
@@ -202,16 +203,24 @@ section {
 }
 
 body {
-  font-family: $font-ubuntu;
+  font-family: $font-rubik;
   font-size: 1rem;
   line-height: 1.875rem;
   overflow-x: hidden;
-  color: $black;
+  color: $f-color;
 }
 
 a {
   text-decoration: none;
-  @include transition-colors;
+  text-decoration-skip-ink: auto;
+  color: $f-color;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+a:hover {
+  color: $f-color-dark;
 }
 
 a[href^="tel"] {
@@ -219,7 +228,7 @@ a[href^="tel"] {
   text-decoration: none;
 }
 
-strong {
+strong{
   font-weight: 700;
 }
 
@@ -232,22 +241,64 @@ strong {
   margin-right: auto;
   padding: 0 1rem;
   width: 100%;
-
-  @media screen and (min-width: $breakpoint-md) {
+}
+@media screen and (min-width: $breakpoint-md) {
+  .container {
     max-width: $breakpoint-md;
   }
-  @media screen and (min-width: $breakpoint-md) {
+}
+@media screen and (min-width: $breakpoint-md) {
+  .container {
     max-width: $breakpoint-md;
   }
-  @media screen and (min-width: $breakpoint-lg) {
+}
+@media screen and (min-width: $breakpoint-lg) {
+  .container {
     padding: 0 2.5rem;
+    max-width: $breakpoint-lg;
   }
-  @media screen and (min-width: $breakpoint-xl) {
+}
+@media screen and (min-width: $breakpoint-xl) {
+  .container {
     max-width: $breakpoint-xl;
   }
-  @media screen and (min-width: $breakpoint-1_5xl) {
+}
+@media screen and (min-width: $breakpoint-1_5xl) {
+  .container {
     max-width: $breakpoint-2xl;
   }
+}
+
+.py-3 {
+  padding: 0.75rem;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .grid {
@@ -308,15 +359,58 @@ img {
   object-fit: cover;
 }
 
+.blue-dark {
+  color: $f-color;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.show-desktop {
+  display: none;
+}
+@media screen and (min-width: $breakpoint-lg) {
+  .show-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .show-mobile {
+    display: none;
+  }
+}
+
+.bg-blue-hard-light {
+  background-color: $f-color-medium;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  z-index: 10;
+}
+
 .scroll-effect {
   opacity: 0;
   transform: translateY(3.125rem);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+}
+
+.scroll-effect.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -332,10 +426,170 @@ img {
   }
 }
 
-.ease-in-out {
+.arrow-swiper {
+  width: 3.75rem !important;
+}
+
+.arrow-swiper::after {
+  content: "" !important;
+  background-image: url("../../dist/icons/arrow-right-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2.8125rem;
+  width: 2.8125rem;
+}
+
+.waves{
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.wave{
+  animation: waveAnimation 3s ease-in-out infinite;
+  width: 100%;
+}
+
+@keyframes waveAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+} 
+
+.wave-1{
+  background-image: url("../../dist/images/wave-1.svg");
+  bottom: -8.1875rem;
+  @media screen and (min-width: $breakpoint-md){
+    bottom: -9.1875rem;
+  }
+
+  @media screen and (min-width: $breakpoint-lg){
+    bottom: -2.1875rem;
+  }
+}
+
+.wave-1a, .wave-1, .wave-1b{
+  background-repeat: no-repeat;
+  height: 5.625rem;
+  z-index: 50;
+}
+
+.wave-1a, .wave-1b{
+  background-image: url("../../dist/images/wave-1a.svg");
+  bottom: -2.1875rem;
+}
+
+.wave-1a{
+  top: -2.8125rem;
+}
+
+.wave-1b{
+  bottom: -5.625rem;
+  transform: rotate(180deg);
+}
+
+.wave-2{
+  bottom: -5.875rem;
+  height: 15rem;
+  z-index: 30;
+  
+  @media screen and (min-width: $breakpoint-md){
+    bottom: -5.875rem;
+  }
+  
+  @media screen and (min-width: $breakpoint-lg){
+    bottom: -1.875rem;
+  }
+}
+
+.wave-3{
+  bottom: 0;
+  height: 20.8125rem;
+  z-index: 20;
+  display: none;
+
+  @media screen and (min-width: $breakpoint-lg){
+    bottom: 0;
+    display: block;
+  }
+}
+
+.wave-4{
+  bottom: -7.5rem;
+  height: 20.625rem;
+  z-index: 10;
+
+  @media screen and (min-width: $breakpoint-md){
+    bottom: -7.5rem;
+  }
+
+  @media screen and (min-width: $breakpoint-lg){
+    bottom: 0;
+  }
+}
+
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.ease-in-out{
   transition: all 0.5s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1);
+  &:hover{
+
+    transform: scale(1.1); 
+  }
+}
+
+.alert{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 0 0 / 69%);
+  
+  &.opened{
+    display: flex;
+  }
+
+  .message{
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    padding: 2.5rem;
+    text-align: center;
+    width: 80%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close-message{
+      position: absolute;
+      top: 0.625rem;
+      right: 0.625rem;
+      content: '';
+      background-image: url(../../dist/icons/close-menu-icon-blue.svg);
+      width: 3.125rem;
+      height: 3.125rem;
+      border: inherit;
+      background-color: inherit;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
   }
 }

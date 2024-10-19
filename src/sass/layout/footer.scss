@@ -2,6 +2,86 @@
 @import "../helpers/mixins.scss";
 
 footer {
+  position: relative;
+  background-color: $f-color;
+  color: $white;
+  
+  @media screen and (min-width: $breakpoint-lg) {
+    margin-top: 6.25rem;
+    padding-top: 6.25rem;
+  }
+
+  .after-footer-bg {
+    background-color: $f-color;
+    color: $white;
+    padding: 0.625rem;
+    
+    a {
+      color: $white;
+    }
+
+    .after-footer {
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      
+      @media screen and (min-width: $breakpoint-lg) {
+        flex-direction: row;
+      }
+    }
+  }
+
+
+  .about-me-footer  {
+    display: grid;
+    row-gap: 1.25rem;
+    padding-bottom: 5rem;
+    
+    @media screen and (min-width: $breakpoint-lg) {
+      column-gap: 2.5rem;
+      row-gap: 1.25rem;
+    }
+
+    @include grid-cols-12;
+    
+    .content{
+      @include col-span-12;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        @include col-span-6;
+      }
+
+      .social-networks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1.25rem;
+        margin: 2.5rem 0;
+      
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .form{
+      @include col-span-12;
+      @media screen and (min-width: $breakpoint-lg) {
+        @include col-span-6;
+      }
+
+      button{
+        border: inherit;
+        min-width: 9.375rem;
+        cursor: pointer;
+      }
+    }
+  }
+
 
   .wpp-float {
     width: 2.5rem;
@@ -31,7 +111,7 @@ footer {
     position: fixed;
     bottom: 2.5rem;
     right: 1.875rem;
-    background: url("../../library/icons/up-arrow.svg");
+    background: url("../../dist/icons/up-arrow.svg");
     width: 1.875rem;
     height: 1.875rem;
     object-fit: contain;

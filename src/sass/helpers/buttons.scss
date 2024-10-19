@@ -26,24 +26,24 @@
 }
 
 .button-second {
-  background-color: $yellow-light;
+  background-color: $f-color;
   color: $white;
 
   &:hover{
-    background-color: $yellow;
+    background-color: $f-color-dark;
     color: $white;
   }
 }
 
 .button-default {
   background-color: $white;
-  color: $yellow-light;
+  color: $f-color;
 
 }
 
 .button-second, .button-default{
   &:hover{
-    background-color: $yellow;
+    background-color: $f-color-dark;
     color: $white;
   }
 }

@@ -1,44 +1,74 @@
+<?php $root = 'http://localhost:8080/teste-admissional-reformulacao-de-site-educacional' ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Admissional: Reformulação de Site Educacional</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex, nofollow" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="<?php echo $root ?>/dist/css/styles.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <meta name="generator" content="WordPress 6.5.3" />
+    <title itemprop="name">Teste Site Educacional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <?php include 'utils/favicon.php'; ?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
-<body>
-    <header class="header">
-        <div class="container content">
-            <div class="image">
-                <img src="dist/images/logo.svg" alt="Logo da Instituição" class="logo">
+<body class="home blog">
+    <header>
+        <div class="header-menu-itens container">
+            <div class="logotype">
+                <a href="/" class="logo">
+                    <img
+                        src="<?php echo $root ?>/dist/icons/logo.svg"
+                        alt=""
+                        itemprop="image"
+                        class="ease-in-out" />
+                </a>
             </div>
-            <div class="navbar">
-                <img src="dist/icons/navbar.svg" alt="Navbar" class="menu-icon" onclick="openMenu()">
-                <div class="navbar__menu">
-                    <nav>
-                        <ul class="navbar__list">
-                            <li><a href="#home" class="item">Home</a></li>
-                            <li><a href="#about" class="item">Colégio</a></li>
-                            <li><a href="#segments" class="item"> Segmentos</a></li>
-                            <li><a href="#differentials" class="item">Diferenciais</a></li>
-                            <li><a href="#contact" class="item">Contato</a></li>
+            <div class="open-menu-mobile">
+                <button onclick="openMenu()" class="bg-menu-mobile">Menu</button>
+            </div>
+            <div class="menu-items scroll-effect">
+                <nav id="custom-header-menu">
+                    <div class="menu-header-container">
+                        <ul id="custom-header-menu" class="main-menu">
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144">
+                                <a href="#segmentos-educacionais">Segmentos Educacionais</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145">
+                                <a href="#diferenciais-da-escola">Diferenciais</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-143">
+                                <a href="#colegio">Colégio</a>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147">
+                                <a
+                                    href="#contato"
+                                    target="_blank">Contato</a>
+                            </li>
                         </ul>
-                    </nav>
-                    <button onclick="closeMenu()" class="bg-close-menu-mobile">
-                        Fechar menu
-                    </button>
-                </div>
+                    </div>
+                </nav>
+
+                <button onclick="closeMenu()" class="bg-close-menu-mobile">
+                    Fechar menu
+                </button>
             </div>
         </div>
     </header>
-    <main>
+    <main id="content" role="main">
+        <div class="home">
+            <div class="page home">
